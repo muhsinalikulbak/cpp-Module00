@@ -6,7 +6,7 @@
 /*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 00:00:57 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/10 01:49:34 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/11 01:22:45 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,14 @@ private:
 
 public:
     // Functions
-    void    Add(const Contact& person);
-    void    Search();
-    void    Exit();
-    void    PrintPhoneBook();
-    void    PrintOnePerson(int index);
-    void    PrintOneColumn(std::string personInfo);
     PhoneBook();
+    void    add(const Contact& person);
+    void    search();
+    void    exit();
+    void    printPhoneBook();
+    void    printOnePerson(int index);
+    void    printOneColumn(std::string personInfo);
+    int     getValidIndex();
 };
 
 #endif

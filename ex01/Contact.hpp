@@ -6,7 +6,7 @@
 /*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 23:24:45 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/09 14:03:22 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/11 00:12:21 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,23 @@ private:
 	std::string _lastName;
 	std::string _nickName;
 	std::string _phoneNumber;
+	std::string _darkSecret;
 
 public:
 	// Setter Functions
-	void	setFirstName(const std::string& first_name);
-	void	setLastName(const std::string& last_name);
-	void	setNickName(const std::string& nick_name);
-	void	setPhoneNumber(const std::string& phone_number);
+	void	setFirstName(const std::string& firstName);
+	void	setLastName(const std::string& lastName);
+	void	setNickName(const std::string& nickName);
+	void	setPhoneNumber(const std::string& phoneNumber);
+	void	setDarkSecret(const std::string& darkSecret);
+
 
 	// Getter Functions
 	std::string getFirstName();
 	std::string getLastName();
 	std::string getNickName();
 	std::string	getPhoneNumber();
+	std::string	getDarkSecret();
 };
 
 

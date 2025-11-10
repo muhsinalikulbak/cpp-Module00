@@ -6,7 +6,7 @@
 /*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 00:25:46 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/10 01:54:49 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/11 01:22:07 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Contact createContact()
     std::string lastName;
     std::string nickName;
     std::string phoneNumber;
+    std::string darkSecret;
 
     while (true)
     {
@@ -46,12 +47,18 @@ int main()
 
         input = toLower(input);
         if (input == "search")
-            phoneBook.Search();
+            phoneBook.search();
         else if (input == "add")
         {
-            phoneBook.Add(createContact());
+            phoneBook.add(createContact());
         }
         else if (input == "exit")
-            phoneBook.Exit();
+            phoneBook.exit();
+        else
+        {
+            std::cout << "\033[2J\033[1;1H";
+            std::cout << "Please enter one of the add, search or exit options" << std::endl;
+            std::cout << "--" << std::endl;
+        }
     }
 }

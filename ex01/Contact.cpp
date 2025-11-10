@@ -6,7 +6,7 @@
 /*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 01:04:47 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/09 14:06:24 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/11 00:53:52 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,30 @@
 /* Setter Functions */
 /********************/
 
-void	Contact::setFirstName(const std::string& first_name)
+void	Contact::setFirstName(const std::string& firstName)
 {
-	_firstName = first_name;
+	_firstName = firstName;
 }
 
-void	Contact::setLastName(const std::string& last_name)
+void	Contact::setLastName(const std::string& lastName)
 {
-	_lastName = last_name;
+	_lastName = lastName;
 }
 
-void	Contact::setNickName(const std::string& nick_name)
+void	Contact::setNickName(const std::string& nickName)
 {
-	_nickName = nick_name;
+	_nickName = nickName;
 }
 
-void	Contact::setPhoneNumber(const std::string& phone_number)
+void	Contact::setPhoneNumber(const std::string& phoneNumber)
 {
-	_phoneNumber = phone_number;
+	_phoneNumber = phoneNumber;
 }
 
-
+void	Contact::setDarkSecret(const std::string& darkSecret)
+{
+	_darkSecret = darkSecret;
+}
 
 /********************/
 /* Getter Functions */
@@ -60,4 +63,9 @@ std::string	Contact::getNickName()
 std::string	Contact::getPhoneNumber()
 {
 	return _phoneNumber;
+}
+
+std::string	Contact:: getDarkSecret()
+{
+	return _darkSecret;
 }
