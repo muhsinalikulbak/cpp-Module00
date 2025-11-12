@@ -6,7 +6,7 @@
 /*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 01:20:27 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/12 17:20:23 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/12 17:43:57 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ PhoneBook::PhoneBook()
 
 PhoneBook::~PhoneBook() 
 {
-	std::cout << "\nExiting... °‧ 𓆝 𓆟 𓆞 ·｡" << std::endl;
+
 }
 
 void	PhoneBook::add()

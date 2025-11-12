@@ -6,7 +6,7 @@
 /*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 00:25:46 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/12 17:04:10 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/12 17:54:50 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 # include "Contact.hpp"
 # include "PhoneBook.hpp"
 
-// std::string toLower(std::string str)
-// {
-//     ret
-// }
-
+static void strToLower(std::string& str)
+{
+    for (int i = 0; i < str.length(); i++)
+    {
+        str[i] = tolower(str[i]);
+    }
+}
 
 int main()
 {
@@ -33,11 +35,15 @@ int main()
     while (true)
     {
         input = PhoneBook::getLine("Please enter input : ");
-        if (input == "Exit")
+        strToLower(input);
+        if (input == "exit")
+        {
+        	std::cout << "\nExiting... °‧ 𓆝 𓆟 𓆞 ·｡" << std::endl;
             break ;
-        if (input == "Search")
+        }
+        if (input == "search")
             phoneBook.search();
-        else if (input == "Add")
+        else if (input == "add")
             phoneBook.add();
         else
         {
