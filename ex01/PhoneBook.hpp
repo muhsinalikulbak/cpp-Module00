@@ -6,7 +6,7 @@
 /*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 00:00:57 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/12 17:16:36 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/12 17:38:01 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,18 @@ private:
 	int     _nextPerson;
 	int     _totalPeople;
 	Contact	createContact();
-
-public:
+	void	printPhoneBook();
+	void	printOnePerson(int index);
+	void	printOneColumn(std::string personInfo);
+	int		getValidIndex();
+	bool	isAllDigit(const std::string& strNumber);
+	
+	public:
 	// Functions
 	PhoneBook();
 	~PhoneBook();
 	void	add();
 	void	search();
-	void	printPhoneBook();
-	void	printOnePerson(int index);
-	void	printOneColumn(std::string personInfo);
-	int		getValidIndex();
-	static	bool isAllDigit(const std::string& strNumber);
 	static	std::string getLine(std::string inputMessage);
 };
 

@@ -10,6 +10,8 @@ SRCS = Contact.cpp \
 OBJS_DIR = obj
 OBJS = $(OBJS_DIR)/Contact.o $(OBJS_DIR)/PhoneBook.o $(OBJS_DIR)/main.o
 
+HEADERS = Contact.hpp PhoneBook.hpp
+
 # Make silent
 MAKEFLAGS += --silent
 
@@ -20,7 +22,7 @@ $(NAME): $(OBJS_DIR) $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 	@echo "✅ $(NAME) Ready!"
 
-$(OBJS_DIR)/%.o: %.cpp
+$(OBJS_DIR)/%.o: %.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(OBJS_DIR):
