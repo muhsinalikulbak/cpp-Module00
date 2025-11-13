@@ -6,7 +6,7 @@
 /*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 01:20:27 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/12 17:43:57 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/14 00:56:40 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ void	PhoneBook::printPhoneBook()
 void	PhoneBook::printOnePerson(int index)
 {
 	std::cout << std::endl;
-	std::cout << "\n     Index|First Name| Last Name| Nick Name|Dark Secre.|Phone Num." << std::endl;
+	std::cout << "\n     Index|First Name| Last Name| Nick Name|Dark Secr.|Phone Num." << std::endl;
 	std::cout << "         ";
 	std::cout << index + 1;
 	std::cout << '|';
@@ -132,9 +132,9 @@ void	PhoneBook::printOnePerson(int index)
 	std::cout << '|';
 	printOneColumn(_people[index].getNickName());
 	std::cout << '|';
-	printOneColumn(_people[index].getPhoneNumber());
-	std::cout << '|';
 	printOneColumn(_people[index].getDarkSecret());
+	std::cout << '|';
+	printOneColumn(_people[index].getPhoneNumber());
 	std::cout << std::endl;
 }
 
