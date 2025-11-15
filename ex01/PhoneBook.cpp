@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
+/*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 01:20:27 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/15 19:02:54 by mkulbak          ###   ########.fr       */
+/*   Updated: 2025/11/16 00:56:30 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int	PhoneBook::getValidIndex()
 		if (strIndex.empty() || strIndex.length() > 1 || !PhoneBook::isAllDigit(strIndex))
 		{
 			std::cout << CLEAR;
-			std::cout << "Wrong entry!" << std::endl;
+			std::cout << "Invalid index!" << std::endl;
 		}
 		else
 		{
@@ -99,7 +99,7 @@ int	PhoneBook::getValidIndex()
 			if (index < 1 || index > _totalPeople)
 			{
 				std::cout << CLEAR;
-				std::cout << "Wrong entry!" << std::endl;
+				std::cout << "Invalid index!" << std::endl;
 			}
 			else
 				return (index - 1);
@@ -128,19 +128,11 @@ void	PhoneBook::printPhoneBook()
 void	PhoneBook::printOnePerson(int index)
 {
 	std::cout << std::endl;
-	std::cout << "\n     Index|First Name| Last Name| Nick Name|Dark Secr.|Phone Num." << std::endl;
-	std::cout << "         ";
-	std::cout << index + 1;
-	std::cout << '|';
-	printOneColumn(_people[index].getFirstName());
-	std::cout << '|';
-	printOneColumn(_people[index].getLastName());
-	std::cout << '|';
-	printOneColumn(_people[index].getNickName());
-	std::cout << '|';
-	printOneColumn(_people[index].getDarkSecret());
-	std::cout << '|';
-	printOneColumn(_people[index].getPhoneNumber());
+	std::cout << "First Name : " << _people[index].getFirstName() << std::endl;
+	std::cout << "Last Name : " << _people[index].getLastName() << std::endl;
+	std::cout << "Nick Name : " << _people[index].getNickName() << std::endl;
+	std::cout << "Dark Secret : " << _people[index].getDarkSecret() << std::endl;
+	std::cout << "Phone Number : " << _people[index].getPhoneNumber() << std::endl;
 	std::cout << std::endl;
 }
 
