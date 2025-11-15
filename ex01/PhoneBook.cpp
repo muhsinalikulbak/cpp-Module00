@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 01:20:27 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/15 02:07:30 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/15 19:02:54 by mkulbak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ Contact PhoneBook::createContact()
     person.setNickName(PhoneBook::getLine("Nick Name : "));
     person.setDarkSecret(PhoneBook::getLine("Dark Secret : "));
 
-	// PHONE NUMBER
     while (true)
     {
         phoneNumber = PhoneBook::getLine("Phone number : ");
@@ -56,9 +55,11 @@ Contact PhoneBook::createContact()
 			if (phoneNumber.length() == 10)
 				break ;
 		}
+		std::cout << CLEAR;
 		std::cout << "Wrong phone number!" << std::endl;
     }
     person.setPhoneNumber(phoneNumber);
+	std::cout << CLEAR;
     std::cout << "Information saved successfully ✔️" << std::endl;
     return (person);
 }
@@ -69,6 +70,7 @@ void	PhoneBook::search()
 
 	if (_totalPeople == 0)
 	{
+		std::cout << CLEAR;
 		std::cout << "There is no one in the phone book yet" << std::endl;
 		return ;
 	}
@@ -88,13 +90,17 @@ int	PhoneBook::getValidIndex()
 		strIndex = PhoneBook::getLine(") : ");
 		if (strIndex.empty() || strIndex.length() > 1 || !PhoneBook::isAllDigit(strIndex))
 		{
+			std::cout << CLEAR;
 			std::cout << "Wrong entry!" << std::endl;
 		}
 		else
 		{
 			index = strIndex[0] - '0';
 			if (index < 1 || index > _totalPeople)
+			{
+				std::cout << CLEAR;
 				std::cout << "Wrong entry!" << std::endl;
+			}
 			else
 				return (index - 1);
 		}
@@ -181,7 +187,10 @@ std::string	PhoneBook::getLine(std::string inputMessage)
 			exit(0);
 		}
 		else if (input.empty())
+		{
+			std::cout << CLEAR;
 			std::cout << "Entry cannot be empty! ❌" << std::endl;
+		}
 		else
 			break ;
 	}

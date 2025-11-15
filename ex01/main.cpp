@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 00:25:46 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/15 02:07:19 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/15 19:25:45 by mkulbak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int main()
     std::string prompt;
     PhoneBook   phoneBook;
 
-    prompt = "*********************\n"
+    prompt = "\n*********************\n"
             "*Search, Add or Exit*\n"
-            "*********************\n";
+            "*********************\n\n";
     std::cout << prompt;
     while (true)
     {
-        input = PhoneBook::getLine("Please enter input : ");
+        input = PhoneBook::getLine("Please select an action : ");
         strToLower(input);
         if (input == "exit")
         {
@@ -45,6 +45,9 @@ int main()
         else if (input == "add")
             phoneBook.add();
         else
-            std::cout <<"-PLEASE ENTER ONE OF THE ADD!, SEARCH! OR EXIT! OPTIONS-" << std::endl;
+        {
+			std::cout << CLEAR;
+            std::cout << prompt << "-PLEASE ENTER ONE OF THE ADD!, SEARCH! OR EXIT! OPTIONS-\n" << std::endl;
+        }
     }
 }

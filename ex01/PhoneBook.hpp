@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 00:00:57 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/15 02:07:56 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/15 19:25:01 by mkulbak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <string>
 #include <cstdlib>
 #include <iostream>
+
+#define CLEAR "\033[H\033[2J\033[3J"
 
 class PhoneBook
 {
@@ -33,13 +35,13 @@ private:
 	void	printOneColumn(std::string personInfo);
 	int		getValidIndex();
 	bool	isAllDigit(const std::string& strNumber);
-	
+
 public:
 	PhoneBook();
 	~PhoneBook();
 	void	add();
 	void	search();
-	static	std::string getLine(std::string inputMessage);
+	static std::string getLine(std::string inputMessage);
 };
 
 #endif
