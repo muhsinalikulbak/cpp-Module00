@@ -52,7 +52,7 @@ Contact PhoneBook::createContact()
 		{
 			if (phoneNumber[0] == '+' && phoneNumber.length() == 11)
 				break ;
-			if (phoneNumber.length() == 10)
+			if (phoneNumber[0] != '+' && phoneNumber.length() == 10)
 				break ;
 		}
 		std::cout << CLEAR;
@@ -86,8 +86,7 @@ int	PhoneBook::getValidIndex()
 
 	while (true)
 	{
-		std::cout << "Please enter index (1-" << _totalPeople;
-		strIndex = PhoneBook::getLine(") : ");
+		strIndex = PhoneBook::getLine("Please enter index (1-8) : ");
 		if (strIndex.empty() || strIndex.length() > 1 || !PhoneBook::isAllDigit(strIndex))
 		{
 			std::cout << CLEAR;
@@ -128,6 +127,7 @@ void	PhoneBook::printPhoneBook()
 void	PhoneBook::printOnePerson(int index)
 {
 	std::cout << std::endl;
+	std::cout << "Index : " << index + 1 << std::endl;
 	std::cout << "First Name : " << _people[index].getFirstName() << std::endl;
 	std::cout << "Last Name : " << _people[index].getLastName() << std::endl;
 	std::cout << "Nick Name : " << _people[index].getNickName() << std::endl;
