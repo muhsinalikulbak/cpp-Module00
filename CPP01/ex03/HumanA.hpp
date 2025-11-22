@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
+/*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 18:11:35 by mkulbak           #+#    #+#             */
-/*   Updated: 2025/11/22 18:23:46 by mkulbak          ###   ########.fr       */
+/*   Updated: 2025/11/23 00:30:19 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #define HUMAN_A
 
 #include <string>
+#include <iostream>
 #include "Weapon.hpp"
 
 class HumanA
@@ -22,14 +23,15 @@ class HumanA
 private:
 
 	std::string _name;
+	Weapon&  _weapon;
 	
 public:
 
-	HumanA(const std::string& name, const std::string& type);
+	HumanA(const std::string& name, Weapon& weapon);
 	~HumanA();
-	void	Attack();
-	Weapon  weapon;
-	
+	const std::string&	getName() const;
+	void				setName(const std::string& name);
+	void				attack();
 };
 
 

@@ -3,29 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
+/*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 17:32:38 by mkulbak           #+#    #+#             */
-/*   Updated: 2025/11/22 18:26:19 by mkulbak          ###   ########.fr       */
+/*   Updated: 2025/11/23 00:57:20 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
-#include <iostream>
 
-HumanA::HumanA(const std::string& name, const std::string& type)
+HumanA::HumanA(const std::string& name, Weapon& weapon) : _weapon(weapon)
 {
-    Weapon  weapon;
-
     _name = name;
-    weapon.setType(type);
 };
 
 HumanA::~HumanA()
 {
 
 };
-void    HumanA::Attack()
+void    HumanA::attack()
 {
-    std::cout << _name << " attacks with their " << weapon.getType() << std::endl;
+    std::cout << _name << " attacks with their " << _weapon.getType() << std::endl;
+}
+const std::string&	HumanA::getName() const
+{
+    return _name;
+}
+
+void    HumanA::setName(const std::string& name)
+{
+    _name = name;
 }

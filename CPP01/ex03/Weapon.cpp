@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   _weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
+/*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 17:27:00 by mkulbak           #+#    #+#             */
-/*   Updated: 2025/11/22 18:15:27 by mkulbak          ###   ########.fr       */
+/*   Updated: 2025/11/22 22:55:20 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon()
+Weapon::Weapon(const std::string& type)
 {
-
+	_type = type;
 };
 
 Weapon::~Weapon()
 {
-
+	
 };
 
 const std::string&	Weapon::getType() const

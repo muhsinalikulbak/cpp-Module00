@@ -6,16 +6,20 @@
 #    By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 23:25:07 by muhsin            #+#    #+#              #
-#    Updated: 2025/11/20 23:25:12 by muhsin           ###   ########.fr        #
+#    Updated: 2025/11/23 00:03:02 by muhsin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-AME = brain
+NAME = Weapon
 
 CXX = c++
 CXXFLAGS =  -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp \
+	   Weapon.cpp \
+	   HumanA.cpp \
+	   HumanB.cpp \
+	   
 
 
 OBJS_DIR = obj
@@ -23,7 +27,7 @@ OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
 
 
 # Make silent
-MAKEFLAGS += --silent
+# MAKEFLAGS += --silent
 
 all: $(NAME)
 
