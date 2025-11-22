@@ -6,7 +6,7 @@
 /*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 17:27:00 by mkulbak           #+#    #+#             */
-/*   Updated: 2025/11/22 17:31:16 by mkulbak          ###   ########.fr       */
+/*   Updated: 2025/11/22 18:15:27 by mkulbak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ const std::string&	Weapon::getType() const
 	return _type;
 }
 
-void	Weapon::setType(std::string type)
+void	Weapon::setType(const std::string& type)
 {
 	_type = type;
 }

@@ -6,38 +6,26 @@
 /*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 17:32:38 by mkulbak           #+#    #+#             */
-/*   Updated: 2025/11/22 17:39:16 by mkulbak          ###   ########.fr       */
+/*   Updated: 2025/11/22 18:26:19 by mkulbak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_A
-#define HUMAN_A
+#include "HumanA.hpp"
+#include <iostream>
 
-#include <string>
-#include "Weapon.hpp"
-
-class HumanA
+HumanA::HumanA(const std::string& name, const std::string& type)
 {
-private:
-
-    std::string _name;
-    
-public:
-
-    HumanA(/* args */);
-    ~HumanA();
     Weapon  weapon;
-    
-};
 
-HumanA::HumanA(/* args */)
-{
-}
+    _name = name;
+    weapon.setType(type);
+};
 
 HumanA::~HumanA()
 {
+
+};
+void    HumanA::Attack()
+{
+    std::cout << _name << " attacks with their " << weapon.getType() << std::endl;
 }
-
-
-
-#endif
