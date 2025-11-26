@@ -3,19 +3,21 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+         #
+#    By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 16:35:56 by mkulbak           #+#    #+#              #
-#    Updated: 2025/11/23 16:36:17 by mkulbak          ###   ########.fr        #
+#    Updated: 2025/11/26 23:15:02 by muhsin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Sed
+NAME = replace
 
 CXX = c++
-CXXFLAGS =  -Wall -Wextra -Werror -std=c++98
+CXXFLAGS =   -std=c++98
+# -Wall -Wextra -Werror Ekle
 
 SRCS = main.cpp \
+	   Replace.cpp \
 	   
 
 
