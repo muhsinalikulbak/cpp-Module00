@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 16:35:53 by mkulbak           #+#    #+#             */
-/*   Updated: 2025/11/26 23:36:11 by muhsin           ###   ########.fr       */
+/*   Updated: 2025/11/28 19:44:40 by mkulbak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ static bool	argvChecker(int argc, char const *argv[])
 		return (false);
 	}
 	file.close();
+	if (*argv[2] == '\0')
+	{
+	    std::cerr << "Error: search string cannot be empty" << std::endl;
+		return (false);
+	}
 	return (true);
 }
 
@@ -38,5 +43,4 @@ int main(int argc, char const *argv[])
 		return (1);
 	
 	Replace::fileReplacer(argv[1], argv[2], argv[3]);
-
 }
