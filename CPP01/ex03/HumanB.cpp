@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkulbak <mkulbak@student.42.fr>            +#+  +:+       +#+        */
+/*   By: muhsin <muhsin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:38:00 by muhsin            #+#    #+#             */
-/*   Updated: 2025/11/23 19:41:29 by mkulbak          ###   ########.fr       */
+/*   Updated: 2025/11/29 01:11:45 by muhsin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void    HumanB::setWeapon(Weapon& weapon)
     _weapon = &weapon;
 }
 
-Weapon HumanB::getWeapon()
+Weapon HumanB::getWeapon() const
 {
     return *_weapon;
 }
